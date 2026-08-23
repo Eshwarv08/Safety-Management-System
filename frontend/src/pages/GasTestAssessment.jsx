@@ -717,103 +717,134 @@ export default function GasTestAssessment() {
               {/* Table Data */}
               <div className="w-full flex flex-col text-[9px] sm:text-xs text-[#2b4c7e] border-t border-gray-300">
                 
-                {/* Row 1 */}
+                {/* Row 1: Licence */}
                 <div className="flex flex-col sm:flex-row border-b border-gray-300">
-                  <div className="w-full sm:w-[25%] p-2 border-b sm:border-b-0 sm:border-r border-gray-300 font-bold">1. Australian Driver's Licence:</div>
-                  <div className="w-full sm:w-[25%] p-2 border-b sm:border-b-0 sm:border-r border-gray-300 font-bold">State:</div>
-                  <div className="flex-1 p-2 font-bold">Licence number:</div>
-                </div>
-
-                {/* Row 2 */}
-                <div className="flex flex-col sm:flex-row border-b border-gray-300">
-                  <div className="w-full sm:w-[25%] p-2 border-b sm:border-b-0 sm:border-r border-gray-300 font-bold">2. Medicare Card:</div>
-                  <div className="w-full sm:w-[35%] p-2 border-b sm:border-b-0 sm:border-r border-gray-300 font-bold">Medicare card number:</div>
-                  <div className="flex-1 p-2 font-bold">Individual reference number (next to your name on medicare card):</div>
-                </div>
-
-                {/* Row 3 */}
-                <div className="flex flex-col sm:flex-row border-b border-gray-300">
-                  <div className="hidden sm:block w-[25%] p-2 border-r border-gray-300"></div>
-                  <div className="w-full sm:w-[35%] p-2 border-b sm:border-b-0 sm:border-r border-gray-300 flex flex-wrap items-center gap-2">
-                    <span className="font-bold">Card colour:</span>
-                    <label className="flex items-center space-x-1"><span className="text-black font-normal">Green</span><input type="checkbox" className="w-3 h-3 border border-[#2b4c7e]" /></label>
-                    <label className="flex items-center space-x-1"><span className="text-black font-normal">Yellow</span><input type="checkbox" className="w-3 h-3 border border-[#2b4c7e]" /></label>
-                    <label className="flex items-center space-x-1"><span className="text-black font-normal">Blue</span><input type="checkbox" className="w-3 h-3 border border-[#2b4c7e]" /></label>
+                  <div className="w-full sm:w-[25%] p-2 border-b sm:border-b-0 sm:border-r border-gray-300 font-bold">
+                    1. Australian Driver's Licence:
                   </div>
-                  <div className="flex-1 p-2 flex items-center gap-1 text-black font-normal flex-wrap">
-                    <span className="text-[#2b4c7e] font-bold">Expiry date</span>
-                    <input type="text" className="w-4 border-b border-black text-center outline-none bg-transparent" /> /
-                    <input type="text" className="w-4 border-b border-black text-center outline-none bg-transparent" /> /
-                    <input type="text" className="w-8 border-b border-black text-center outline-none bg-transparent" />
-                    <span>(format DD/MM/YYYY)</span>
+                  <div className="w-full sm:w-[37.5%] p-2 border-b sm:border-b-0 sm:border-r border-gray-300 flex items-center gap-2">
+                    <span className="font-bold">State:</span>
+                    <input type="text" className="border-b border-[#2b4c7e] outline-none flex-1 bg-transparent" />
+                  </div>
+                  <div className="flex-1 p-2 flex items-center gap-2">
+                    <span className="font-bold">Licence number:</span>
+                    <input type="text" className="border-b border-[#2b4c7e] outline-none flex-1 bg-transparent" />
                   </div>
                 </div>
 
-                {/* Row 4 */}
+                {/* Row 2: Medicare Card (spans multiple rows) */}
                 <div className="flex flex-col sm:flex-row border-b border-gray-300">
-                  <div className="w-full sm:w-[25%] p-2 border-b sm:border-b-0 sm:border-r border-gray-300 font-bold">3. Australian Birth Certificate:</div>
-                  <div className="w-full sm:w-[35%] p-2 border-b sm:border-b-0 sm:border-r border-gray-300 text-black font-normal flex items-center">
-                    <span className="text-[#2b4c7e] font-bold mr-2">State/Territory:</span>
-                    <input type="text" className="flex-1 bg-transparent outline-none" />
+                  {/* Left cell (spans both sub-rows on desktop) */}
+                  <div className="w-full sm:w-[25%] p-2 border-b sm:border-b-0 sm:border-r border-gray-300 font-bold flex items-center">
+                    2. Medicare Card:
                   </div>
-                  <div className="w-full sm:w-[15%] p-2 border-b sm:border-b-0 sm:border-r border-gray-300 font-bold">4.Immicard:</div>
-                  <div className="flex-1 p-2 text-black font-normal flex items-center">
-                    <span className="text-[#2b4c7e] font-bold mr-2">Immicard Number:</span>
-                    <input type="text" className="flex-1 bg-transparent outline-none" />
+                  
+                  {/* Nested right container */}
+                  <div className="flex-1 flex flex-col">
+                    {/* Medicare Card Sub-row 1 */}
+                    <div className="flex flex-col sm:flex-row border-b border-gray-300">
+                      <div className="w-full sm:w-[50%] p-2 border-b sm:border-b-0 sm:border-r border-gray-300 flex items-center gap-2">
+                        <span className="font-bold">Medicare card number:</span>
+                        <input type="text" className="border-b border-[#2b4c7e] outline-none flex-1 bg-transparent" />
+                      </div>
+                      <div className="flex-1 p-2 flex items-center gap-2 font-bold">
+                        <span>Individual reference number (next to your name on medicare card):</span>
+                        <input type="text" className="border-b border-[#2b4c7e] outline-none flex-1 bg-transparent" />
+                      </div>
+                    </div>
+                    
+                    {/* Medicare Card Sub-row 2 */}
+                    <div className="flex flex-col sm:flex-row">
+                      <div className="w-full sm:w-[50%] p-2 border-b sm:border-b-0 sm:border-r border-gray-300 flex flex-wrap items-center gap-3">
+                        <span className="font-bold">Card colour:</span>
+                        <label className="flex items-center space-x-1 cursor-pointer"><span className="text-black font-normal">Green</span><input type="checkbox" className="w-3.5 h-3.5 border border-[#2b4c7e] rounded-none" /></label>
+                        <label className="flex items-center space-x-1 cursor-pointer"><span className="text-black font-normal">Yellow</span><input type="checkbox" className="w-3.5 h-3.5 border border-[#2b4c7e] rounded-none" /></label>
+                        <label className="flex items-center space-x-1 cursor-pointer"><span className="text-black font-normal">Blue</span><input type="checkbox" className="w-3.5 h-3.5 border border-[#2b4c7e] rounded-none" /></label>
+                      </div>
+                      <div className="flex-1 p-2 flex flex-wrap items-center gap-1.5 text-black font-normal">
+                        <span className="text-[#2b4c7e] font-bold">Expiry date</span>
+                        <input type="text" className="w-8 border-b border-black text-center outline-none bg-transparent" /> /
+                        <input type="text" className="w-8 border-b border-black text-center outline-none bg-transparent" /> /
+                        <input type="text" className="w-14 border-b border-black text-center outline-none bg-transparent" />
+                        <span className="text-[#2b4c7e] font-bold">(format DD/MM/YYYY)</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
 
-                {/* Row 5 */}
+                {/* Row 4: Birth Certificate / Immicard */}
                 <div className="flex flex-col sm:flex-row border-b border-gray-300">
-                  <div className="w-full sm:w-[25%] p-2 border-b sm:border-b-0 sm:border-r border-gray-300 font-bold">5. Australian Passport:</div>
-                  <div className="flex-1 p-2 text-black font-normal flex items-center">
-                    <span className="text-[#2b4c7e] font-bold mr-2">Passport number:</span>
-                    <input type="text" className="flex-1 bg-transparent outline-none" />
+                  <div className="w-full sm:w-[25%] p-2 border-b sm:border-b-0 sm:border-r border-gray-300 font-bold">
+                    3. Australian Birth Certificate:
+                  </div>
+                  <div className="w-full sm:w-[37.5%] p-2 border-b sm:border-b-0 sm:border-r border-gray-300 flex items-center gap-2">
+                    <span className="font-bold">State/Territory:</span>
+                    <input type="text" className="border-b border-[#2b4c7e] outline-none flex-1 bg-transparent" />
+                  </div>
+                  <div className="flex-1 p-2 flex flex-col justify-center gap-1">
+                    <div>
+                      <span className="font-bold text-black">4. Immicard:</span> <span className="font-bold">Immicard Number:</span>
+                    </div>
+                    <input type="text" className="border-b border-[#2b4c7e] outline-none w-full bg-transparent" />
                   </div>
                 </div>
 
-                {/* Row 6 */}
+                {/* Row 5: Passport */}
                 <div className="flex flex-col sm:flex-row border-b border-gray-300">
-                  <div className="w-full sm:w-[25%] p-2 border-b sm:border-b-0 sm:border-r border-gray-300 font-bold flex flex-col justify-center">
-                    <span>6.Non-Australian Passport:</span>
-                    <span className="font-normal">(with Australian Visa)</span>
-                    <span className="font-normal">Passport number:</span>
+                  <div className="w-full sm:w-[25%] p-2 border-b sm:border-b-0 sm:border-r border-gray-300 font-bold">
+                    5. Australian Passport:
                   </div>
-                  <div className="w-full sm:w-[35%] p-2 border-b sm:border-b-0 sm:border-r border-gray-300 text-black font-normal flex items-start">
-                    <span className="text-[#2b4c7e] font-bold mr-2">Passport number:</span>
-                    <input type="text" className="flex-1 bg-transparent outline-none mt-1" />
-                  </div>
-                  <div className="flex-1 p-2 text-black font-normal flex items-start">
-                    <span className="text-[#2b4c7e] font-bold mr-2">Country of issue:</span>
-                    <input type="text" className="flex-1 bg-transparent outline-none mt-1" />
+                  <div className="flex-1 p-2 flex items-center gap-2">
+                    <span className="font-bold">Passport number:</span>
+                    <input type="text" className="border-b border-[#2b4c7e] outline-none flex-1 bg-transparent" />
                   </div>
                 </div>
 
-                {/* Row 7 */}
+                {/* Row 6: Non-Australian Passport */}
                 <div className="flex flex-col sm:flex-row border-b border-gray-300">
-                  <div className="w-full sm:w-[25%] p-2 border-b sm:border-b-0 sm:border-r border-gray-300 font-bold">7. Citizenship Certificate:</div>
-                  <div className="w-full sm:w-[35%] p-2 border-b sm:border-b-0 sm:border-r border-gray-300 text-black font-normal flex items-start">
-                    <span className="text-[#2b4c7e] font-bold mr-2">Stock number:</span>
-                    <input type="text" className="flex-1 bg-transparent outline-none mt-1" />
+                  <div className="w-full sm:w-[25%] p-2 border-b sm:border-b-0 sm:border-r border-gray-300 font-bold flex flex-col justify-center leading-tight">
+                    <span>6. Non-Australian Passport:</span>
+                    <span className="font-normal text-[10px]">(with Australian Visa)</span>
                   </div>
-                  <div className="flex-1 p-2 flex items-center gap-1 text-black font-normal flex-wrap">
+                  <div className="w-full sm:w-[37.5%] p-2 border-b sm:border-b-0 sm:border-r border-gray-300 flex items-center gap-2">
+                    <span className="font-bold">Passport number:</span>
+                    <input type="text" className="border-b border-[#2b4c7e] outline-none flex-1 bg-transparent" />
+                  </div>
+                  <div className="flex-1 p-2 flex items-center gap-2">
+                    <span className="font-bold">Country of issue:</span>
+                    <input type="text" className="border-b border-[#2b4c7e] outline-none flex-1 bg-transparent" />
+                  </div>
+                </div>
+
+                {/* Row 7: Citizenship Certificate */}
+                <div className="flex flex-col sm:flex-row border-b border-gray-300">
+                  <div className="w-full sm:w-[25%] p-2 border-b sm:border-b-0 sm:border-r border-gray-300 font-bold">
+                    7. Citizenship Certificate:
+                  </div>
+                  <div className="w-full sm:w-[37.5%] p-2 border-b sm:border-b-0 sm:border-r border-gray-300 flex items-center gap-2">
+                    <span className="font-bold">Stock number:</span>
+                    <input type="text" className="border-b border-[#2b4c7e] outline-none flex-1 bg-transparent" />
+                  </div>
+                  <div className="flex-1 p-2 flex flex-wrap items-center gap-1.5 text-black font-normal">
                     <span className="text-[#2b4c7e] font-bold">Acquisition date</span>
-                    <input type="text" className="w-6 border-b border-black text-center outline-none bg-transparent" /> /
-                    <input type="text" className="w-6 border-b border-black text-center outline-none bg-transparent" /> /
-                    <input type="text" className="w-12 border-b border-black text-center outline-none bg-transparent" />
-                    <span>(day/month/year)</span>
+                    <input type="text" className="w-8 border-b border-black text-center outline-none bg-transparent" /> /
+                    <input type="text" className="w-8 border-b border-black text-center outline-none bg-transparent" /> /
+                    <input type="text" className="w-14 border-b border-black text-center outline-none bg-transparent" />
+                    <span className="text-[#2b4c7e] font-bold">(day/month/year)</span>
                   </div>
                 </div>
 
-                {/* Row 8 */}
+                {/* Row 8: Descent */}
                 <div className="flex flex-col sm:flex-row">
-                  <div className="w-full sm:w-[25%] p-2 border-b sm:border-b-0 sm:border-r border-gray-300 font-bold">8. Certificate of Registration<br/>by Descent:</div>
-                  <div className="flex-1 p-2 flex items-center gap-1 text-black font-normal flex-wrap">
+                  <div className="w-full sm:w-[25%] p-2 border-b sm:border-b-0 sm:border-r border-gray-300 font-bold flex items-center leading-tight">
+                    8. Certificate of Registration by Descent:
+                  </div>
+                  <div className="flex-1 p-2 flex flex-wrap items-center gap-1.5 text-black font-normal">
                     <span className="text-[#2b4c7e] font-bold">Acquisition date</span>
-                    <input type="text" className="w-6 border-b border-black text-center outline-none bg-transparent" /> /
-                    <input type="text" className="w-6 border-b border-black text-center outline-none bg-transparent" /> /
-                    <input type="text" className="w-12 border-b border-black text-center outline-none bg-transparent" />
-                    <span>(day/month/year)</span>
+                    <input type="text" className="w-8 border-b border-black text-center outline-none bg-transparent" /> /
+                    <input type="text" className="w-8 border-b border-black text-center outline-none bg-transparent" /> /
+                    <input type="text" className="w-14 border-b border-black text-center outline-none bg-transparent" />
+                    <span className="text-[#2b4c7e] font-bold">(day/month/year)</span>
                   </div>
                 </div>
               </div>
@@ -1716,13 +1747,13 @@ export default function GasTestAssessment() {
 
       {/* ======================= PAGE 12 (Enrolment Form Page 7 - Privacy Notice) ======================= */}
       <div className="min-h-screen flex items-center justify-center py-8 px-4 font-sans text-black">
-        <div className="bg-white w-full max-w-[850px] shadow-lg p-8 sm:p-12 relative flex flex-col min-h-[1100px] border border-gray-800">
+        <div className="bg-white w-full max-w-[850px] shadow-lg p-4 sm:p-12 relative flex flex-col min-h-[1100px] border border-gray-800">
           
           <div className="flex-1 flex flex-col mt-4">
             
             {/* Header */}
             <div className="w-full flex items-center justify-center mb-6 relative">
-              <div className="absolute left-0 top-0">
+              <div className="absolute left-0 top-0 hidden sm:block">
                 <img src={logoImage} alt="STA Logo" className="w-[120px] h-auto object-contain" />
               </div>
               <div className="text-center">
@@ -1799,13 +1830,13 @@ export default function GasTestAssessment() {
 
       {/* ======================= PAGE 13 (Enrolment Form Page 8 - Disability Supplement) ======================= */}
       <div className="min-h-screen flex items-center justify-center py-8 px-4 font-sans text-black">
-        <div className="bg-white w-full max-w-[850px] shadow-lg p-8 sm:p-12 relative flex flex-col min-h-[1100px] border border-gray-800">
+        <div className="bg-white w-full max-w-[850px] shadow-lg p-4 sm:p-12 relative flex flex-col min-h-[1100px] border border-gray-800">
           
           <div className="flex-1 flex flex-col mt-4">
             
             {/* Header */}
             <div className="w-full flex items-center justify-center mb-6 relative">
-              <div className="absolute left-0 top-0">
+              <div className="absolute left-0 top-0 hidden sm:block">
                 <img src={logoImage} alt="STA Logo" className="w-[120px] h-auto object-contain" />
               </div>
               <div className="text-center">
@@ -1871,13 +1902,13 @@ export default function GasTestAssessment() {
 
       {/* ======================= PAGE 14 (Enrolment Form Page 9 - Terms & Conditions 1) ======================= */}
       <div className="min-h-screen flex items-center justify-center py-8 px-4 font-sans text-black">
-        <div className="bg-white w-full max-w-[850px] shadow-lg p-8 sm:p-12 relative flex flex-col min-h-[1100px] border border-gray-800">
+        <div className="bg-white w-full max-w-[850px] shadow-lg p-4 sm:p-12 relative flex flex-col min-h-[1100px] border border-gray-800">
           
           <div className="flex-1 flex flex-col mt-4">
             
             {/* Header */}
             <div className="w-full flex items-center justify-center mb-6 relative">
-              <div className="absolute left-0 top-0">
+              <div className="absolute left-0 top-0 hidden sm:block">
                 <img src={logoImage} alt="STA Logo" className="w-[120px] h-auto object-contain" />
               </div>
               <div className="text-center">
@@ -1915,7 +1946,7 @@ export default function GasTestAssessment() {
                   <li>Accepted students who withdraw after course commencement owing to unforeseen or exceptional circumstance can apply for fee refund. If granted, fees will be refunded on a pro-rata basis (based on the number of days remaining in the course).</li>
                   <li>Safety Training Academy defaults if a course does not commence on the designated day or is actually cancelled. No student will be disadvantaged.</li>
                   <li>Fee refunds will be made within 14 days after demand when Safety Training Academy defaults and within 28 days after demand when the student defaults.</li>
-                  <li>Safety Training Academy 's dispute resolution processes do not circumscribe the student's right to pursue other legal remedies. This agreement does not remove the right of either party to take further action under Australia's consumer protection laws for unpaid and overdue fees.</li>
+                  <li>Safety Training Academy's dispute resolution processes do not circumscribe the student's right to pursue other legal remedies. This agreement does not remove the right of either party to take further action under Australia's consumer protection laws for unpaid and overdue fees.</li>
                   <li>Students may contact the Australian Skills Quality Authority to make a formal complaint.</li>
                   <li>This refund policy is subject to review from time to time in accordance with the change to conditions policy outlined below.</li>
                   <li>Students have a right to obtain a refund for services not provided by Safety Training Academy in the event the arrangement is terminated early or Safety Training Academy fails to provide the agreed services.</li>
@@ -1945,13 +1976,13 @@ export default function GasTestAssessment() {
 
       {/* ======================= PAGE 15 (Enrolment Form Page 10 - Terms & Conditions 2) ======================= */}
       <div className="min-h-screen flex items-center justify-center py-8 px-4 font-sans text-black">
-        <div className="bg-white w-full max-w-[850px] shadow-lg p-8 sm:p-12 relative flex flex-col min-h-[1100px] border border-gray-800">
+        <div className="bg-white w-full max-w-[850px] shadow-lg p-4 sm:p-12 relative flex flex-col min-h-[1100px] border border-gray-800">
           
           <div className="flex-1 flex flex-col mt-4">
             
             {/* Header */}
             <div className="w-full flex items-center justify-center mb-6 relative">
-              <div className="absolute left-0 top-0">
+              <div className="absolute left-0 top-0 hidden sm:block">
                 <img src={logoImage} alt="STA Logo" className="w-[120px] h-auto object-contain" />
               </div>
               <div className="text-center">
@@ -1976,7 +2007,7 @@ export default function GasTestAssessment() {
                   </li>
                   <li>A deposit of no more than $1,500 is required prior to course commencement; this deposit is to confirm a place in the course. Please refer to the Course Flyer for the deposit amount required.</li>
                   <li>No refunds will be issued once the course has commenced</li>
-                  <li>Students are responsible for the safe storage of their Certificate and Statements of Attainment. Students are responsible for the safe storage of their Certificate and Statements of Attainment. If a student requires a reissue of their Certificate Statement of Attainment, a <strong>certificate re-issue fee of $50</strong> will be charged.</li>
+                  <li>Students are responsible for the safe storage of their Certificate and Statements of Attainment. If a student requires a reissue of their Certificate Statement of Attainment, a <strong>certificate re-issue fee of $50</strong> will be charged.</li>
                   <li>If a student is deemed not yet competent on completion of training, they will be offered an opportunity to be reassessed. If a student is deemed not yet competent a second time, they will be given another opportunity for reassessment.</li>
                 </ol>
 
@@ -2017,13 +2048,13 @@ export default function GasTestAssessment() {
 
       {/* ======================= PAGE 16 (Enrolment Form Page 11 - Appeals & Reassessments) ======================= */}
       <div className="min-h-screen flex items-center justify-center py-8 px-4 font-sans text-black">
-        <div className="bg-white w-full max-w-[850px] shadow-lg p-8 sm:p-12 relative flex flex-col min-h-[1100px] border border-gray-800">
+        <div className="bg-white w-full max-w-[850px] shadow-lg p-4 sm:p-12 relative flex flex-col min-h-[1100px] border border-gray-800">
           
           <div className="flex-1 flex flex-col mt-4">
             
             {/* Header */}
             <div className="w-full flex items-center justify-center mb-6 relative">
-              <div className="absolute left-0 top-0">
+              <div className="absolute left-0 top-0 hidden sm:block">
                 <img src={logoImage} alt="STA Logo" className="w-[120px] h-auto object-contain" />
               </div>
               <div className="text-center">
