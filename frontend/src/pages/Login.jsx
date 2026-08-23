@@ -15,9 +15,9 @@ export default function Login() {
     setIsLoading(true);
 
     try {
-      // We use Vite's dev server proxy or direct absolute URL for now
-      // Assuming backend runs on 5000 locally
-      const response = await axios.post('http://localhost:5000/api/safety/auth/login', {
+      // Use environment variable for the API URL, fallback to localhost for local dev
+      const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+      const response = await axios.post(`${apiUrl}/api/safety/auth/login`, {
         email,
         password
       });
