@@ -1,34 +1,6 @@
 import React from 'react';
 import logoImage from '../img/logo.png';
-import coverImage from '../img/Question2pageno1.png';
-import pageno3Image from '../img/pageno3.png';
-import q1Image from '../img/Question2-qno1.png';
-import q3Image from '../img/Question2-qno3.png';
-import q4Image from '../img/Question2-qno4.png';
-import q5Image from '../img/Question2-qno5.png';
-import q7Image from '../img/Question2-qno7.png';
-import q8Image from '../img/Question2-qno8.png';
-import q10Image from '../img/Question2-qno10.png';
-import q12Image from '../img/Question2-qno12.png';
-import q13Image from '../img/Question2-qno13.png';
-import q14Image from '../img/Question2-qno14.png';
-import q17Image from '../img/Question2-qno17.png';
-import q18Image from '../img/Question2-qno18.png';
-import q19Image from '../img/Question2-qno19.png';
-import q20Image from '../img/Question2-qno20.png';
-import q21Image from '../img/Question2-qno21.png';
-import q22Image from '../img/Question2-qno22.png';
-import q23Image from '../img/Question2-qno23.png';
-import q24Image from '../img/Question2-qno24.png';
-import q25Image from '../img/Question2-qno25.png';
-import q26Image from '../img/Question2-qno26.png';
-import q27Image from '../img/Question2-qno27.png';
-import q28Image from '../img/Question2-qno28.png';
-import ppe1Image from '../img/personal-prodective-equipment-1.png';
-import ppe2Image from '../img/personal-prodective-equipment-2.png';
-import ppe3Image from '../img/personal-prodective-equipment-3.png';
-import ppe4Image from '../img/personal-prodective-equipment-4.png';
-import ppe5Image from '../img/personal-prodective-equipment-5.png';
+import { coverImage, pageno3Image, questionImages, ppeImages } from '../img/question2';
 
 export default function GasTestAssessment() {
   return (
@@ -3008,7 +2980,7 @@ export default function GasTestAssessment() {
                   <textarea className="w-full h-full min-h-[200px] bg-transparent outline-none resize-none"></textarea>
                 </div>
                 <div className="w-full sm:w-[250px] flex items-center justify-center p-2 bg-white">
-                  <img src={q1Image} alt="Worker preparing for gas test" className="max-w-full max-h-full object-contain" />
+                  <img src={questionImages.q1} alt="Worker preparing for gas test" className="max-w-full max-h-full object-contain" />
                 </div>
               </div>
             </div>
@@ -3071,7 +3043,7 @@ export default function GasTestAssessment() {
                   <textarea className="w-full h-full min-h-[350px] bg-transparent outline-none resize-none"></textarea>
                 </div>
                 <div className="w-full sm:w-[250px] flex items-center justify-center p-2 bg-white">
-                  <img src={q3Image} alt="Worker dizzy from H2S" className="max-w-full max-h-full object-contain" />
+                  <img src={questionImages.q3} alt="Worker dizzy from H2S" className="max-w-full max-h-full object-contain" />
                 </div>
               </div>
             </div>
@@ -3089,7 +3061,7 @@ export default function GasTestAssessment() {
                   <textarea className="w-full h-full min-h-[350px] bg-transparent outline-none resize-none"></textarea>
                 </div>
                 <div className="w-full sm:w-[250px] flex items-center justify-center p-2 bg-white">
-                  <img src={q4Image} alt="Worker calibrating monitor" className="max-w-full max-h-full object-contain" />
+                  <img src={questionImages.q4} alt="Worker calibrating monitor" className="max-w-full max-h-full object-contain" />
                 </div>
               </div>
             </div>
@@ -3137,7 +3109,7 @@ export default function GasTestAssessment() {
                   <textarea className="w-full h-full min-h-[350px] bg-transparent outline-none resize-none"></textarea>
                 </div>
                 <div className="w-full sm:w-[250px] flex items-center justify-center p-2 bg-white">
-                  <img src={q5Image} alt="Worker gas testing" className="max-w-full max-h-full object-contain" />
+                  <img src={questionImages.q5} alt="Worker gas testing" className="max-w-full max-h-full object-contain" />
                 </div>
               </div>
             </div>
@@ -3203,7 +3175,7 @@ export default function GasTestAssessment() {
                   <textarea className="w-full h-full min-h-[100px] bg-transparent outline-none resize-none"></textarea>
                 </div>
                 <div className="w-full sm:w-[250px] flex items-center justify-center p-2 bg-white">
-                  <img src={q7Image} alt="Gas measuring" className="max-w-full max-h-full object-contain" />
+                  <img src={questionImages.q7} alt="Gas measuring" className="max-w-full max-h-full object-contain" />
                 </div>
               </div>
             </div>
@@ -3221,7 +3193,7 @@ export default function GasTestAssessment() {
                   <textarea className="w-full h-full min-h-[250px] bg-transparent outline-none resize-none"></textarea>
                 </div>
                 <div className="w-full sm:w-[250px] flex items-center justify-center p-2 bg-white">
-                  <img src={q8Image} alt="Safety Data Sheets" className="max-w-full max-h-full object-contain" />
+                  <img src={questionImages.q8} alt="Safety Data Sheets" className="max-w-full max-h-full object-contain" />
                 </div>
               </div>
             </div>
@@ -3287,7 +3259,7 @@ export default function GasTestAssessment() {
                   <textarea className="w-full h-full min-h-[350px] bg-transparent outline-none resize-none"></textarea>
                 </div>
                 <div className="w-full sm:w-[250px] flex items-center justify-center p-2 bg-white">
-                  <img src={q10Image} alt="Permit for working in a confined space" className="max-w-full max-h-full object-contain" />
+                  <img src={questionImages.q10} alt="Permit for working in a confined space" className="max-w-full max-h-full object-contain" />
                 </div>
               </div>
             </div>
@@ -3358,7 +3330,7 @@ export default function GasTestAssessment() {
                   <textarea className="w-full h-full min-h-[500px] bg-transparent outline-none resize-none"></textarea>
                 </div>
                 <div className="w-full sm:w-[250px] flex items-start justify-center p-2 bg-white">
-                  <img src={q12Image} alt="Worker reviewing plans" className="max-w-full h-auto object-contain mt-2" />
+                  <img src={questionImages.q12} alt="Worker reviewing plans" className="max-w-full h-auto object-contain mt-2" />
                 </div>
               </div>
             </div>
@@ -3406,7 +3378,7 @@ export default function GasTestAssessment() {
                   <textarea className="w-full h-full min-h-[350px] bg-transparent outline-none resize-none"></textarea>
                 </div>
                 <div className="w-full sm:w-[250px] flex items-start justify-center p-2 bg-white">
-                  <img src={q13Image} alt="Worker reviewing plans" className="max-w-full h-auto object-contain mt-2" />
+                  <img src={questionImages.q13} alt="Worker reviewing plans" className="max-w-full h-auto object-contain mt-2" />
                 </div>
               </div>
             </div>
@@ -3424,7 +3396,7 @@ export default function GasTestAssessment() {
                   <textarea className="w-full h-full min-h-[350px] bg-transparent outline-none resize-none"></textarea>
                 </div>
                 <div className="w-full sm:w-[250px] flex items-start justify-center p-2 bg-white">
-                  <img src={q14Image} alt="Worker reviewing plans" className="max-w-full h-auto object-contain mt-2" />
+                  <img src={questionImages.q14} alt="Worker reviewing plans" className="max-w-full h-auto object-contain mt-2" />
                 </div>
               </div>
             </div>
@@ -3551,7 +3523,7 @@ export default function GasTestAssessment() {
                   <textarea className="w-full h-full min-h-[300px] bg-transparent outline-none resize-none"></textarea>
                 </div>
                 <div className="w-full sm:w-[250px] flex items-center justify-center p-2 bg-white">
-                  <img src={q17Image} alt="Entry Permit" className="max-w-full max-h-full object-contain" />
+                  <img src={questionImages.q17} alt="Entry Permit" className="max-w-full max-h-full object-contain" />
                 </div>
               </div>
             </div>
@@ -3569,7 +3541,7 @@ export default function GasTestAssessment() {
                   <textarea className="w-full h-full min-h-[350px] bg-transparent outline-none resize-none"></textarea>
                 </div>
                 <div className="w-full sm:w-[250px] flex items-center justify-center p-2 bg-white">
-                  <img src={q18Image} alt="Gas monitor beeping" className="max-w-full max-h-full object-contain" />
+                  <img src={questionImages.q18} alt="Gas monitor beeping" className="max-w-full max-h-full object-contain" />
                 </div>
               </div>
             </div>
@@ -3617,7 +3589,7 @@ export default function GasTestAssessment() {
                   <textarea className="w-full h-full min-h-[250px] bg-transparent outline-none resize-none"></textarea>
                 </div>
                 <div className="w-full sm:w-[250px] flex items-center justify-center p-2 bg-white">
-                  <img src={q19Image} alt="Laser monitor" className="max-w-full max-h-full object-contain" />
+                  <img src={questionImages.q19} alt="Laser monitor" className="max-w-full max-h-full object-contain" />
                 </div>
               </div>
             </div>
@@ -3635,7 +3607,7 @@ export default function GasTestAssessment() {
                   <textarea className="w-full h-full min-h-[350px] bg-transparent outline-none resize-none"></textarea>
                 </div>
                 <div className="w-full sm:w-[250px] flex items-start justify-center p-2 bg-white">
-                  <img src={q20Image} alt="Breathing apparatus sign" className="max-w-full h-auto object-contain mt-2" />
+                  <img src={questionImages.q20} alt="Breathing apparatus sign" className="max-w-full h-auto object-contain mt-2" />
                 </div>
               </div>
             </div>
@@ -3683,7 +3655,7 @@ export default function GasTestAssessment() {
                   <textarea className="w-full h-full min-h-[350px] bg-transparent outline-none resize-none"></textarea>
                 </div>
                 <div className="w-full sm:w-[250px] flex items-start justify-center p-2 bg-white">
-                  <img src={q21Image} alt="Breathing apparatus sign" className="max-w-full h-auto object-contain mt-2" />
+                  <img src={questionImages.q21} alt="Breathing apparatus sign" className="max-w-full h-auto object-contain mt-2" />
                 </div>
               </div>
             </div>
@@ -3701,7 +3673,7 @@ export default function GasTestAssessment() {
                   <textarea className="w-full h-full min-h-[350px] bg-transparent outline-none resize-none"></textarea>
                 </div>
                 <div className="w-full sm:w-[250px] flex items-start justify-center p-2 bg-white">
-                  <img src={q22Image} alt="Breathing apparatus sign" className="max-w-full h-auto object-contain mt-2" />
+                  <img src={questionImages.q22} alt="Breathing apparatus sign" className="max-w-full h-auto object-contain mt-2" />
                 </div>
               </div>
             </div>
@@ -3762,7 +3734,7 @@ export default function GasTestAssessment() {
                   <textarea className="w-full h-full min-h-[300px] bg-transparent outline-none resize-none"></textarea>
                 </div>
                 <div className="w-full sm:w-[250px] flex items-center justify-center p-2 bg-white">
-                  <img src={q23Image} alt="Worker cleaning equipment" className="max-w-full max-h-full object-contain" />
+                  <img src={questionImages.q23} alt="Worker cleaning equipment" className="max-w-full max-h-full object-contain" />
                 </div>
               </div>
             </div>
@@ -3780,7 +3752,7 @@ export default function GasTestAssessment() {
                   <textarea className="w-full h-full min-h-[300px] bg-transparent outline-none resize-none"></textarea>
                 </div>
                 <div className="w-full sm:w-[250px] flex items-start justify-center p-2 bg-white">
-                  <img src={q24Image} alt="Gas sensor" className="max-w-full h-auto object-contain mt-2" />
+                  <img src={questionImages.q24} alt="Gas sensor" className="max-w-full h-auto object-contain mt-2" />
                 </div>
               </div>
             </div>
@@ -3828,7 +3800,7 @@ export default function GasTestAssessment() {
                   <textarea className="w-full h-full min-h-[500px] bg-transparent outline-none resize-none"></textarea>
                 </div>
                 <div className="w-full sm:w-[350px] flex items-start justify-center p-2 bg-white">
-                  <img src={q25Image} alt="Inspect gas monitor cylinder" className="max-w-full h-auto object-contain mt-2 border border-gray-300" />
+                  <img src={questionImages.q25} alt="Inspect gas monitor cylinder" className="max-w-full h-auto object-contain mt-2 border border-gray-300" />
                 </div>
               </div>
             </div>
@@ -3876,7 +3848,7 @@ export default function GasTestAssessment() {
                   <textarea className="w-full h-full min-h-[350px] bg-transparent outline-none resize-none"></textarea>
                 </div>
                 <div className="w-full sm:w-[350px] flex items-center justify-center p-2 bg-white">
-                  <img src={q26Image} alt="Fault finding methods" className="max-w-full h-auto object-contain" />
+                  <img src={questionImages.q26} alt="Fault finding methods" className="max-w-full h-auto object-contain" />
                 </div>
               </div>
             </div>
@@ -3894,7 +3866,7 @@ export default function GasTestAssessment() {
                   <textarea className="w-full h-full min-h-[300px] bg-transparent outline-none resize-none"></textarea>
                 </div>
                 <div className="w-full sm:w-[250px] flex items-start justify-center p-2 bg-white">
-                  <img src={q27Image} alt="Caution Defective Tag" className="max-w-full h-auto object-contain mt-2" />
+                  <img src={questionImages.q27} alt="Caution Defective Tag" className="max-w-full h-auto object-contain mt-2" />
                 </div>
               </div>
             </div>
@@ -3942,7 +3914,7 @@ export default function GasTestAssessment() {
                   <textarea className="w-full h-full min-h-[500px] bg-transparent outline-none resize-none"></textarea>
                 </div>
                 <div className="w-full sm:w-[400px] flex items-start justify-center p-2 bg-white">
-                  <img src={q28Image} alt="Recording information" className="max-w-full h-auto object-contain mt-2" />
+                  <img src={questionImages.q28} alt="Recording information" className="max-w-full h-auto object-contain mt-2" />
                 </div>
               </div>
             </div>
@@ -5049,11 +5021,11 @@ export default function GasTestAssessment() {
                       <td className="border border-gray-400 p-3">
                         <div className="flex flex-row flex-wrap justify-start items-start gap-2 sm:gap-4">
                           {[
-                            { src: ppe1Image, label: 'SAFETY FOOT\nPROTECTION\nMUST BE WORN' },
-                            { src: ppe2Image, label: 'BREATHING APPARATUS\nMUST BE WORN IN\nTHE AREA' },
-                            { src: ppe3Image, label: 'HEAD PROTECTION\nMUST BE WORN IN\nTHIS AREA' },
-                            { src: ppe4Image, label: 'HIGH VISIBILITY\nSAFETY VEST\nMUST BE WORN' },
-                            { src: ppe5Image, label: 'SAFETY\nHARNESS\nMUST BE\nWORN' },
+                            { src: ppeImages[0], label: 'SAFETY FOOT\nPROTECTION\nMUST BE WORN' },
+                            { src: ppeImages[1], label: 'BREATHING APPARATUS\nMUST BE WORN IN\nTHE AREA' },
+                            { src: ppeImages[2], label: 'HEAD PROTECTION\nMUST BE WORN IN\nTHIS AREA' },
+                            { src: ppeImages[3], label: 'HIGH VISIBILITY\nSAFETY VEST\nMUST BE WORN' },
+                            { src: ppeImages[4], label: 'SAFETY\nHARNESS\nMUST BE\nWORN' },
                           ].map(({ src, label }) => (
                             <div
                               key={label}

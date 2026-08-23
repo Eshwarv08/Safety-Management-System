@@ -1,8 +1,7 @@
 import React from 'react';
-import roofWorkerImage from '../img/roof-worker.png';
 import logoImage from '../img/logo.png';
 import logoIconImage from '../img/logoicon.png';
-import page3Image from '../img/pageno3.png';
+import { roofWorkerImage, page3Image } from '../img/question1';
 
 export default function AssessmentCover() {
   return (
