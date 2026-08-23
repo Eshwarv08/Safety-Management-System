@@ -19,8 +19,21 @@ app.get('/api/safety/health', (req, res) => {
   res.json({ status: 'ok', message: 'Safety Management API is running' });
 });
 
+// Connect to MongoDB function optimized for Serverless
+const connectDB = async () => {
+  if (mongoose.connection.readyState >= 1) {
+    return;
+  }
+  if (!process.env.MONGODB_URI) {
+    throw new Error('MONGODB_URI is not defined in .env');
+  }
+  return mongoose.connect(process.env.MONGODB_URI);
+};
+
 app.post('/api/safety/auth/login', async (req, res) => {
   try {
+    await connectDB();
+    
     const { email, password } = req.body;
     
     if (!email || !password) {
@@ -36,6 +49,10 @@ app.post('/api/safety/auth/login', async (req, res) => {
     if (!isMatch) {
       return res.status(401).json({ error: 'Invalid credentials' });
     }
+    
+    if (!process.env.JWT_SECRET) {
+      return res.status(500).json({ error: 'Server configuration error: JWT_SECRET missing' });
+    }
 
     const token = jwt.sign(
       { userId: user._id, role: user.role }, 
@@ -46,17 +63,9 @@ app.post('/api/safety/auth/login', async (req, res) => {
     res.json({ token, user: { email: user.email, role: user.role } });
   } catch (error) {
     console.error('Login error:', error);
-    res.status(500).json({ error: 'Server error during login', details: error.message, stack: error.stack });
+    res.status(500).json({ error: 'Server error during login', details: error.message });
   }
 });
-
-if (process.env.MONGODB_URI) {
-  mongoose.connect(process.env.MONGODB_URI)
-    .then(() => console.log('MongoDB connected successfully'))
-    .catch(err => console.error('MongoDB connection error:', err));
-} else {
-  console.error('MONGODB_URI is not defined in .env');
-}
 
 // For Vercel Serverless Functions
 module.exports = app;
