@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 export default function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [isLoading, setIsLoading] = useState(false);
-  const [success, setSuccess] = useState(false);
+  const navigate = useNavigate();
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -24,8 +25,7 @@ export default function Login() {
       const { token, user } = response.data;
       localStorage.setItem('safety_token', token);
       localStorage.setItem('safety_user', JSON.stringify(user));
-      setSuccess(true);
-      // Here we would typically redirect, e.g., using useNavigate() from react-router-dom
+      navigate('/dashboard');
       
     } catch (err) {
       setError(err.response?.data?.error || 'Failed to login. Please try again.');
@@ -33,17 +33,6 @@ export default function Login() {
       setIsLoading(false);
     }
   };
-
-  if (success) {
-    return (
-      <div className="min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
-        <div className="sm:mx-auto sm:w-full sm:max-w-md text-center">
-          <h2 className="text-3xl font-extrabold text-green-600 mb-4">Login Successful!</h2>
-          <p className="text-gray-600">You are now authenticated.</p>
-        </div>
-      </div>
-    );
-  }
 
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
