@@ -5,6 +5,7 @@ import AssessmentCover from './pages/AssessmentCover';
 import GasTestAssessment from './pages/GasTestAssessment';
 import UndergroundServicesAssessment from './pages/UndergroundServicesAssessment';
 import ConfinedSpaceAssessment from './pages/ConfinedSpaceAssessment';
+import WorkSafelyAtHeightsAssessment from './pages/WorkSafelyAtHeightsAssessment';
 
 function App() {
   return (
@@ -16,6 +17,8 @@ function App() {
         <Route path="/gas-test-assessment" element={<GasTestAssessment />} />
         <Route path="/underground-services-assessment" element={<UndergroundServicesAssessment />} />
         <Route path="/confined-space-assessment" element={<ConfinedSpaceAssessment />} />
+        <Route path="/work-safely-at-heights-assessment" element={<WorkSafelyAtHeightsAssessment />} />
+        <Route path="/heights-assessment" element={<WorkSafelyAtHeightsAssessment />} />
       </Routes>
     </BrowserRouter>
   )
